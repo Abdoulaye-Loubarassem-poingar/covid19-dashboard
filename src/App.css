@@ -1,0 +1,66 @@
+/* 🌈 Fond animé fluide */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #1d3557, #457b9d, #a8dadc, #f1faee);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🧱 Conteneur principal */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 🔽 Sélecteur d’indicateur */
+.indicator-select {
+  margin: 20px;
+}
+.indicator-select label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.indicator-select select {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* 📊 Titres */
+h1,
+h3 {
+  color: #f1faee;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 🧩 Graphiques */
+canvas {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 🦶 Pied de page */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.8;
+}
