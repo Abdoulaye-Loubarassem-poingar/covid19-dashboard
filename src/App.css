@@ -1,12 +1,20 @@
-/* 🌈 Fond animé fluide */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(-45deg, #1d3557, #457b9d, #a8dadc, #f1faee);
+}
+
+/* 🌈 Animation de fond */
+.App.dark {
+  background: linear-gradient(-45deg, #0d1b2a, #1b263b, #415a77, #778da9);
   background-size: 400% 400%;
-  animation: gradient 12s ease infinite;
+  animation: gradient 15s ease infinite;
   color: #fff;
-  min-height: 100vh;
+}
+.App.light {
+  background: linear-gradient(-45deg, #f1faee, #a8dadc, #457b9d, #1d3557);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #000;
 }
 
 @keyframes gradient {
@@ -21,46 +29,120 @@ body {
   }
 }
 
-/* 🧱 Conteneur principal */
+/* 🔹 Layout principal */
 .App {
   text-align: center;
+  min-height: 100vh;
   padding: 20px;
 }
 
-/* 🔽 Sélecteur d’indicateur */
-.indicator-select {
-  margin: 20px;
+/* En-tête */
+.header-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.indicator-select label {
-  font-weight: bold;
+
+.indicator-select select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+}
+
+.logout-btn {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+/* Authentification */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.auth-container input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
   margin-right: 10px;
 }
-.indicator-select select {
-  background: rgba(255, 255, 255, 0.9);
+.auth-container button {
+  padding: 8px 14px;
   border-radius: 6px;
-  padding: 5px 10px;
   border: none;
-  font-size: 16px;
+  background: #1d3557;
+  color: white;
+  cursor: pointer;
 }
 
-/* 📊 Titres */
-h1,
-h3 {
-  color: #f1faee;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+/* Carte */
+.map-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
 }
 
-/* 🧩 Graphiques */
+/* Graphiques */
 canvas {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* 🦶 Pied de page */
+
+/* Pied de page */
 footer {
   margin-top: 40px;
   font-size: 14px;
   opacity: 0.8;
+}
+
+.chart-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.country-selector select {
+  min-width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+}
+
+.date-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+}
+
+.react-datepicker-wrapper {
+  width: 130px;
 }
