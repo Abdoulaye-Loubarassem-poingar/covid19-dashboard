@@ -1,0 +1,21 @@
+.page {
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  min-width: 220px;
+  height: 120px;
+}
+
+.chart-container {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+}
