@@ -7,7 +7,7 @@ import authRoutes from "./routes/auth.routes.js";
 const app = express();
 
 // Sécurité & middleware
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: ["http://localhost:5173", "https://covid19-dashboard-bvn1j0oup.vercel.app"] }));
 app.use(express.json());
 app.use(helmet());
 
